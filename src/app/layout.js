@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Amusan Toluwanimi - Software Engineer Portfolio',
   description: 'Explore Toluwanimi\'s portfolio showcasing innovative software solutions and expertise in web development, and more.',
-  keywords: ['software engineer', 'web development', 'mobile applications', 'portfolio', 'programming', 'coding', 'Amusan Toluwanmi', 'EmmanuelToluwanimi', 'Emmanuel Toluwanimi'],
+  keywords: ['EmmanuelToluwanimi', 'Emmanuel Toluwanimi','software engineer', 'web development', 'mobile applications', 'portfolio', 'programming', 'coding', 'Amusan Toluwanmi', ],
   robots: "index, follow",
   icons: [
     { rel: "icon", url: "/favicon.ico", href: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
