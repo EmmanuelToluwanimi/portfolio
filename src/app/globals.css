@@ -294,11 +294,7 @@ section {
   display: flex;
 }
 
-/* .about-containers, */
-.about-details-container {
-  display: flex;
-  width: 50%;
-}
+
 
 
 .about-pic {
@@ -363,7 +359,7 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   gap: 0.5rem;
 }
 
@@ -465,6 +461,7 @@ footer p {
 }
 
 @media screen and (max-width: 1200px) {
+  
   #desktop-nav {
     display: none;
   }
@@ -552,4 +549,13 @@ footer p {
   .text-container {
     text-align: justify;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  /* .about-containers, */
+.about-details-container {
+  display: flex;
+  width: 50%;
+}
+
 }
