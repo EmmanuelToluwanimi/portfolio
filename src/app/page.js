@@ -1,10 +1,19 @@
+'use client'
+
 import Image from 'next/image'
 
 export default function Home() {
+
+  function RouteLink(params) {
+    window.location.href = params;
+  }
+
   return (
     <>
       <nav id="desktop-nav">
-        <div className="logo">A~T</div>
+        <div className="logo">
+        <a href="/" className="logo-text">A~T</a>
+        </div>
         <div>
           <ul className="nav-links">
             <li>
@@ -26,29 +35,29 @@ export default function Home() {
       <nav id="hamburger-nav">
         <div className="logo">John Doe</div>
         <div className="hamburger-menu">
-          <div className="hamburger-icon" onclick="toggleMenu()">
+          <div className="hamburger-icon" onClick="toggleMenu()">
             <span />
             <span />
             <span />
           </div>
           <div className="menu-links">
             <li>
-              <a href="#about" onclick="toggleMenu()">
+              <a href="#about" onClick="toggleMenu()">
                 About
               </a>
             </li>
             <li>
-              <a href="#experience" onclick="toggleMenu()">
+              <a href="#experience" onClick="toggleMenu()">
                 Experience
               </a>
             </li>
             <li>
-              <a href="#projects" onclick="toggleMenu()">
+              <a href="#projects" onClick="toggleMenu()">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" onclick="toggleMenu()">
+              <a href="#contact" onClick="toggleMenu()">
                 Contact
               </a>
             </li>
@@ -67,13 +76,15 @@ export default function Home() {
           <div className="btn-container">
             <button
               className="btn btn-color-2"
-              onclick="window.open('./assets/emmanueltoluwanimi_cv.pdf')"
+              onClick={() => RouteLink('./assets/emmanueltoluwanimi_cv.pdf')}
+
             >
               Download CV
             </button>
             <button
               className="btn btn-color-1"
-              onclick="location.href='./#contact'"
+              onClick={() => RouteLink('./#contact')}
+
             >
               Contact Info
             </button>
@@ -83,13 +94,15 @@ export default function Home() {
               src="./assets/linkedin.png"
               alt="My LinkedIn profile"
               className="icon"
-              onclick="location.href='https://linkedin.com/in/emmanueltoluwanimi'"
+              onClick={() => RouteLink('https://linkedin.com/in/emmanueltoluwanimi')}
+
             />
             <img
               src="./assets/github.png"
               alt="My Github profile"
               className="icon"
-              onclick="location.href='https://github.com/emmanueltoluwanimi'"
+              onClick={() => RouteLink('https://github.com/emmanueltoluwanimi')}
+
             />
           </div>
         </div>
@@ -148,7 +161,8 @@ export default function Home() {
           src="./assets/arrow.png"
           alt="Arrow icon"
           className="icon arrow"
-          onclick="location.href='./#experience'"
+          onClick={() => RouteLink('./#experience')}
+
         />
       </section>
       <section id="experience">
@@ -304,7 +318,8 @@ export default function Home() {
           src="./assets/arrow.png"
           alt="Arrow icon"
           className="icon arrow"
-          onclick="location.href='./#projects'"
+          onClick={() => RouteLink('./#projects')}
+
         />
       </section>
       <section id="projects">
@@ -326,13 +341,13 @@ export default function Home() {
               <div className="btn-container">
                 {/* <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick="location.href='https://github.com/'"
                 >
                   Github
                 </button> */}
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://www.swipetelecom.com.ng/'"
+                  onClick={() => RouteLink('https://www.swipetelecom.com.ng/')}
                 >
                   Live Demo
                 </button>
@@ -350,13 +365,13 @@ export default function Home() {
               <div className="btn-container">
                 {/* <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  ="location.href='https://github.com/'"
                 >
                   Github
                 </button> */}
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://www.ayolawal.com/'"
+                  onClick={() => RouteLink('https://www.ayolawal.com/')}
                 >
                   Live Demo
                 </button>
@@ -376,13 +391,13 @@ export default function Home() {
               <div className="btn-container">
                 {/* <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick="location.href='https://github.com/'"
                 >
                   Github
                 </button> */}
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://aura.transcorphotels.com/'"
+                  onClick={() => RouteLink('https://aura.transcorphotels.com/')}
                 >
                   Live Demo
                 </button>
@@ -394,7 +409,7 @@ export default function Home() {
           src="./assets/arrow.png"
           alt="Arrow icon"
           className="icon arrow"
-          onclick="location.href='./#contact'"
+          onClick={() => RouteLink('./#contact')}
         />
       </section>
       <section id="contact">

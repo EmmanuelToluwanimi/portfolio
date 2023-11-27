@@ -210,6 +210,11 @@ section {
   gap: 1rem;
 }
 
+.logo-text{
+  text-decoration: none;
+  color: black;
+}
+
 /* ICONS */
 
 .icon {
