@@ -2,112 +2,449 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav id="desktop-nav">
+        <div className="logo">A~T</div>
+        <div>
+          <ul className="nav-links">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <nav id="hamburger-nav">
+        <div className="logo">John Doe</div>
+        <div className="hamburger-menu">
+          <div className="hamburger-icon" onclick="toggleMenu()">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="menu-links">
+            <li>
+              <a href="#about" onclick="toggleMenu()">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#experience" onclick="toggleMenu()">
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#projects" onclick="toggleMenu()">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onclick="toggleMenu()">
+                Contact
+              </a>
+            </li>
+          </div>
+        </div>
+      </nav>
+
+      <section id="profile">
+        <div className="section__pic-container">
+          <img src="./assets/profilebg.png" alt="John Doe profile picture" />
+        </div>
+        <div className="section__text">
+          <p className="section__text__p1">Hello, I&apos;m</p>
+          <h1 className="title">Amusan Toluwanimi</h1>
+          <p className="section__text__p2">Software Engineer</p>
+          <div className="btn-container">
+            <button
+              className="btn btn-color-2"
+              onclick="window.open('./assets/emmanueltoluwanimi_cv.pdf')"
+            >
+              Download CV
+            </button>
+            <button
+              className="btn btn-color-1"
+              onclick="location.href='./#contact'"
+            >
+              Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              className="icon"
+              onclick="location.href='https://linkedin.com/in/emmanueltoluwanimi'"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              className="icon"
+              onclick="location.href='https://github.com/emmanueltoluwanimi'"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <p className="section__text__p1">Get To Know More</p>
+        <h1 className="title">About Me</h1>
+        <div className="section-container">
+          <div className="section__pic-container">
+            <img
+              src="./assets/profilebg.png"
+              alt="Profile picture"
+              className="about-pic"
+            />
+          </div>
+          <div className="about-details-container">
+            <div className="about-containers">
+              <div className="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  className="icon"
+                />
+                <h3>Experience</h3>
+                <p>
+                  3+ years <br />
+                  Software Engineering
+                </p>
+              </div>
+              <div className="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  className="icon"
+                />
+                <h3>Education</h3>
+                <p>
+                  Professional Certificate
+                  <br />
+                  Software Engineering
+                </p>
+              </div>
+            </div>
+            <div className="text-container">
+              <p>
+                I am a seasoned Software Engineer with over three years of expertise in web application development. My skills
+                encompass front-end development using HTML, CSS, and JavaScript frameworks, complemented by back-end
+                proficiency in Node.js, and database management with MySQL and MongoDB. Throughout my career, I have
+                consistently delivered high-quality code across a spectrum of projects, ranging from e-commerce platforms and
+                social media applications to enterprise-level solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onclick="location.href='./#experience'"
         />
-      </div>
+      </section>
+      <section id="experience">
+        <p className="section__text__p1">Explore My</p>
+        <h1 className="title">Experience</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container">
+              <h2 className="experience-sub-title">Frontend Development</h2>
+              <div className="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    {/* <p>Experienced</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    {/* <p>Experienced</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>SASS</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    {/* <p>Basic</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    {/* <p>Basic</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Tailwind CSS</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div className="details-container">
+              <h2 className="experience-sub-title">Backend Development</h2>
+              <div className="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p></p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Express JS</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Git/Github</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>GraphQL</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>MongoDB</h3>
+                    {/* <p>Intermediate</p> */}
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+      </section>
+      <section id="projects">
+        <p className="section__text__p1">Browse My Recent</p>
+        <h1 className="title">Projects</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="./assets/swipetel.png"
+                  alt="swipetel.png"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">
+                SwipeTelecom
+              </h2>
+              <div className="btn-container">
+                {/* <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button> */}
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://www.swipetelecom.com.ng/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="./assets/ayolawal.png"
+                  alt="ayo lawal"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">Ayo Lawal Design</h2>
+              <div className="btn-container">
+                {/* <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button> */}
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://www.ayolawal.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="./assets/aura.png"
+                  alt="Project 3"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">
+                Aura by Transcorphotels
+              </h2>
+              <div className="btn-container">
+                {/* <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button> */}
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onclick="location.href='https://aura.transcorphotels.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+      <section id="contact">
+        <p className="section__text__p1">Get in Touch</p>
+        <h1 className="title">Contact Me</h1>
+        <div className="contact-info-upper-container">
+          <div className="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              className="icon contact-icon email-icon"
+            />
+            <p>
+              <a href="mailto:emmanueltoluwanimi01@gmail.com">emmanueltoluwanimi01@gmail.com</a>
+            </p>
+          </div>
+          <div className="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              className="icon contact-icon"
+            />
+            <p>
+              <a href="https://www.linkedin.com/emmanueltoluwanimi">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div className="nav-links-container">
+            <ul className="nav-links">
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright © 2023 Amusan T. Emmanuel. All Rights Reserved.</p>
+      </footer>
+    </>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   )
 }
