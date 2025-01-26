@@ -75,7 +75,7 @@ export default function Home() {
 
       <section id="profile">
         <div className="section__pic-container">
-          <img src="./assets/profilebg.png" alt="John Doe profile picture" />
+          <img src="./assets/profilebg.png" className='rounded-full' alt="John Doe profile picture" />
         </div>
         <div className="section__text">
           <p className="section__text__p1">Hello, I&apos;m</p>
@@ -136,7 +136,7 @@ export default function Home() {
                 />
                 <h3>Experience</h3>
                 <p>
-                  3+ years <br />
+                  5+ years <br />
                   Software Engineering
                 </p>
               </div>
@@ -210,7 +210,7 @@ export default function Home() {
                     className="icon"
                   />
                   <div>
-                    <h3>SASS</h3>
+                    <h3>ReactJS</h3>
                     {/* <p>Intermediate</p> */}
                   </div>
                 </article>
