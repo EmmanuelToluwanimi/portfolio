@@ -465,7 +465,7 @@ export default function Home() {
             </ul>
           </div>
         </nav>
-        <p>Copyright © 2023 Amusan T. Emmanuel. All Rights Reserved.</p>
+        <p>Copyright © 2025 Amusan T. Emmanuel. All Rights Reserved.</p>
       </footer>
     </>
 
